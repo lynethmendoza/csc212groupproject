@@ -6,6 +6,7 @@
 #include <cmath>
 
 std::string koch_snowflake(int degree);
+std::string snowflake(int degree);
 
 int main(){
     std::ofstream of("l-system.txt");
@@ -25,6 +26,17 @@ std::string koch_snowflake(int degree){
         commands += snowflake(degree);
         commands += "+ + ";
     }
+
+    return commands;
+}
+
+std::string snowflake(int degree){
+    if(degree == 0){
+        return "F ";
+    }
+    std::string commands = "";
+
+	// Logic for generating the snowflake goes here.
 
     return commands;
 }
