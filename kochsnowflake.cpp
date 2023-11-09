@@ -1,1 +1,30 @@
+//Starter code used from Lab 6
 
+#include <string>
+#include <iostream>
+#include <fstream>
+#include <cmath>
+
+std::string koch_snowflake(int degree);
+
+int main(){
+    std::ofstream of("l-system.txt");
+
+    int degree = 3;
+
+    of << koch_snowflake(degree);
+    //of << sierpinski_triangle(degree, std::pow(2, degree - 1));
+}
+
+// *** DO NOT TOUCH! ***
+std::string koch_snowflake(int degree){
+    std::string commands = "";
+
+	// This handles generating the 4 'sides' of the snowflake.
+    for(int i = 0; i < 4; i++){
+        commands += snowflake(degree);
+        commands += "+ + ";
+    }
+
+    return commands;
+}
