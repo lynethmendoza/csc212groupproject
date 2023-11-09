@@ -1,10 +1,10 @@
+//Start code used from Lab 6
+
 #include <string>
 #include <iostream>
 #include <fstream>
 #include <cmath>
 
-std::string koch_snowflake(int degree);
-std::string snowflake(int degree);
 std::string sierpinski_triangle(int degree, int len);
 
 int main(){
