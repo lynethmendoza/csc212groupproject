@@ -7,7 +7,7 @@
 #include <cmath>
 
 std::string triangle(int length) //helper function 
-std::string sierpinski_triangle(int order); //recursive function
+std::string sierpinski_triangle(int order, int length); //recursive function
 
 int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
@@ -15,6 +15,8 @@ int main(int argv, char* argc[]){
     int order = std::stoi(argc[1]);
     of << sierpinski_triangle(order));
 }
+
+std::string triangle(int length)
 
 std::string sierpinski_triangle(int order, int length){
     if(order == 1){
