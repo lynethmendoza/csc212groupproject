@@ -21,7 +21,7 @@ std::string sierpinski_triangle(int order, int length){
         triangle(length);
         //our base case is if we reach our order 1, that means that all we have to draw is one triangle
     }
-    sierpinski_triangle(order-1, length);
+    sierpinski_triangle(order-1, length); // our recursive calls 
     sierpinski_triangle(order-1, length);
     sierpinski_triangle(order-1, length);
     std::string commands = "";
