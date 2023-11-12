@@ -10,12 +10,12 @@ std::string sierpinski_triangle(int degree, int len);
 int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
 
-    int degree =;
+    int size = std::stoi(argc[1]);
     of << sierpinski_triangle(degree, std::pow(2, degree - 1));
 }
 
 std::string sierpinski_triangle(int degree, int len){
-    if()(
+    if(){
         
 
     std::string commands = "";
