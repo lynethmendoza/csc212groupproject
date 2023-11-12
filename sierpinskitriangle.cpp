@@ -6,7 +6,8 @@
 #include <fstream>
 #include <cmath>
 
-std::string sierpinski_triangle(int degree, int len);
+std::string triangle(int length) //helper function 
+std::string sierpinski_triangle(int order); //recursive function
 
 int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
@@ -15,10 +16,12 @@ int main(int argv, char* argc[]){
     of << sierpinski_triangle(order));
 }
 
-std::string sierpinski_triangle(int order){
+std::string sierpinski_triangle(int order, int length){
     if(order == 1){
+        triangle(length);
+        //our base case is if we reach our order 1, that means that all we have to draw is one triangle
     }
-
+    sierpinski_triangle(order-1, length);
     std::string commands = "";
 
     // Logic for generating the triangles goes here.
