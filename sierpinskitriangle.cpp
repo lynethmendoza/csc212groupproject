@@ -16,11 +16,17 @@ int main(int argv, char* argc[]){
     of << sierpinski_triangle(order));
 }
 
-std::string triangle(int length)
+std::string triangle(int length){
+    for(int i = 0; i < 3; i++){
+        //make a command to draw the side
+        //change the angle?
+    }
+}
 
 std::string sierpinski_triangle(int order, int length){
+    std::string commands = "";
     if(order == 1){
-        triangle(length);
+        commands = triangle(length);
         //our base case is if we reach our order 1, that means that all we have to draw is one triangle
     }
     sierpinski_triangle(order-1, length); // our recursive calls 
@@ -29,9 +35,6 @@ std::string sierpinski_triangle(int order, int length){
     //command to increase the length by 2^n-2
     sierpinski_triangle(order-1, length);
     //command to increase the length by 2^n-2
-    std::string commands = "";
-
-    // Logic for generating the triangles goes here.
 
     return commands;
 }
