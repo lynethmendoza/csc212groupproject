@@ -7,17 +7,16 @@
 
 std::string sierpinski_triangle(int degree, int len);
 
-int main(){
+int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
 
-    int degree = 3;
+    int degree =;
     of << sierpinski_triangle(degree, std::pow(2, degree - 1));
 }
 
 std::string sierpinski_triangle(int degree, int len){
-    if(degree == 0){
-        return "";
-    }
+    if()(
+        
 
     std::string commands = "";
 
