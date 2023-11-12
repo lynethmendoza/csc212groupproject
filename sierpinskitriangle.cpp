@@ -1,4 +1,5 @@
 //Start code used from Lab 6
+//Sierpinski triangle is the idea of drawing smaller, equilateral triangles into one big equilateral triangle 
 
 #include <string>
 #include <iostream>
@@ -10,13 +11,13 @@ std::string sierpinski_triangle(int degree, int len);
 int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
 
-    int size = std::stoi(argc[1]);
-    of << sierpinski_triangle(degree, std::pow(2, degree - 1));
+    int order = std::stoi(argc[1]);
+    of << sierpinski_triangle(order));
 }
 
-std::string sierpinski_triangle(int degree, int len){
-    if(){
-        
+std::string sierpinski_triangle(int order){
+    if(order == 1){
+    }
 
     std::string commands = "";
 
