@@ -27,6 +27,7 @@ std::string sierpinski_triangle(int order, int length){
     }
 
     std::string commands = sierpinski_triangle(order -1, length/2)+ "- " + sierpinski_triangle(order - 1, length/2) + "- " + sierpinski_triangle(order -1, length/2) + "+ + " + sierpinski_triangle(order - 1, length/2);
+    // this is our recursive call, it calls the function 4 times, because you are trying to make 4 smaller equal triangles in one triangle
     
     return commands;
 }
