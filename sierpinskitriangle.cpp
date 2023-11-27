@@ -23,7 +23,7 @@ std::string sierpinski_triangle(int order, int length){
     std::string commands = "";
     if(order == 0){
         return = "F+F+F+";
-        //our base case is if we reach our order 1, that means that all we have to draw is one triangle
+        //our base case is if we reach our order 0, that means that all we have to draw is one triangle
     }
 
     std::string commands = sierpinski_traingle(order -1, length/2) + sierpinski_traingle(order - 1, length/2) + sierpinski_traingle(order -1, length/2)
