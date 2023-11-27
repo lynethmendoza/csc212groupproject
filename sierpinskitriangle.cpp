@@ -26,7 +26,7 @@ std::string sierpinski_triangle(int order, int length){
         //our base case is if we reach our order 0, that means that all we have to draw is one triangle
     }
 
-    std::string commands = sierpinski_traingle(order -1, length/2) + sierpinski_traingle(order - 1, length/2) + sierpinski_traingle(order -1, length/2)
+    std::string commands = sierpinski_triangle(order -1, length/2)+ "- " + sierpinski_triangle(order - 1, length/2) + "- " + sierpinski_triangle(order -1, length/2) + "+ + " + sierpinski_triangle(order - 1, length/2);
     
     return commands;
 }
