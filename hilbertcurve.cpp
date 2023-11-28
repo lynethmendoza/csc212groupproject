@@ -27,6 +27,16 @@ void appendLeftCurve(std::stringstream& ss, int level) {
 
 // recursive function that appends the right part of the hilbert curve
 void appendRightCurve(std::stringstream& ss, int level) {
+  if (level == 0) return; // base case
+
+  ss << "+"; // turtle turns right
+  appendLeftCurve(ss, level - 1);
+  ss << "F-"; // turtle moves forward and turns left
+  appendRightCurve(ss, level - 1);
+  ss << "F"; // turtle moves forward
+  appendRightCurve(ss, level - 1);
+  ss << "-F"; // turtle turns left and moves forward
+  appendLeftCurve(ss, level - 1);
   
 }
 
