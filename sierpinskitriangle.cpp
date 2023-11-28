@@ -7,25 +7,35 @@
 #include <fstream>
 #include <cmath>
 
-std::string sierpinski_triangle(int order, int length); //recursive function
+std::string sierpinski_triangle(int order); //recursive function
 
 int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
-
     int order = std::stoi(argc[1]);
-    int length = std::pow(2, order - 1); //we need the lenght to be 2^n-1, n ebing the degrees 
-    of << sierpinski_triangle(order, length);
+    of << sierpinski_triangle(order);
 }
 
 
-std::string sierpinski_triangle(int order, int length){
-    if(order == 1){
-        return "F+F+F+";
-        //our base case is if we reach our order 0, that means that all we have to draw is one triangle
+std::string sierpinski_triangle(int order){
+    if(order == 0){
+        return "FXF--FF--FF";
+        //our base case is if we reach our order 0, that means that all we have to draw is one triangle, these commands will make one triangel
     }
     
-    std::string commands = sierpinski_triangle(order - 1, length/2)+ "- " + sierpinski_triangle(order - 1, length/2) + "- " + sierpinski_triangle(order -1, length/2) + "+ + " + sierpinski_triangle(order - 1, length/2);
+    std::string commands = sierpinski_triangle(order - 1);
     // this is our recursive call, it calls the function 4 times, because you are trying to make 4 smaller equal triangles in one triangle
-    
-    return commands;
+
+    std::string newCommands = "";
+    for(int i = 0; i < commands.size(); i++){
+        if(commands[i] == 'F'){
+            newCommands += "FF";
+        }else if(commands[i] == 'X'){
+            newCommands += "--FXF++FXF++FXF--";
+        }else{
+            newCommands += commands[i];
+        }
+    }
+
+    return newCommands;
 }
+
