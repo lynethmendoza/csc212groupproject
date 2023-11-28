@@ -38,9 +38,9 @@ std::string sierpinski_triangle(int order){
     //this loop iterates throught the command string to look at each character to check whether there is an F or X in the current commands
     for(int i = 0; i < commands.size(); i++){
         if(commands[i] == 'F'){
-            newCommands += "FF";
+            newCommands += "FF"; //rule 1
         }else if(commands[i] == 'X'){
-            newCommands += "--FXF++FXF++FXF--";
+            newCommands += "--FXF++FXF++FXF--"; //rule 2
         }else{
             newCommands += commands[i];
             //if there is neither, you don't change the command, you keep it there
