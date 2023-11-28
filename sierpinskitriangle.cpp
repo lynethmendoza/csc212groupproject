@@ -10,7 +10,7 @@
 std::string sierpinski_triangle(int order); //recursive function
 
 int main(int argv, char* argc[]){
-    std::string filename = argc[1];
+    std::string filename = argc[1]; //input file that will put the commands
     std::ofstream of(filename);
     int order = std::stoi(argc[2]);
     of << sierpinski_triangle(order);
