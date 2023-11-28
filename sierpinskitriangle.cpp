@@ -1,4 +1,4 @@
-//Starter code used from Lab 6
+//Start code used from Lab 6
 //Sierpinski triangle is the idea of drawing smaller, equilateral triangles into one big equilateral triangle, depending on the degree given
 //In this case, degree/order 0 == no triangle
 //This code uses L System commands in order to visually represent the output
@@ -10,11 +10,12 @@
 std::string sierpinski_triangle(int order); //recursive function
 
 int main(int argv, char* argc[]){
-    std::ofstream of("l-system.txt");
-    int order = std::stoi(argc[1]);
+    std::string filename = argc[1];
+    std::ofstream of(filename);
+    int order = std::stoi(argc[2]);
     of << sierpinski_triangle(order);
     of.close();
-    std::cout << "Sierpinski Triangle commands written to 'l-system.txt'\n";
+    std::cout << "Sierpinski Triangle commands written to '" << filename << "' \n";
 }
 
 
@@ -38,9 +39,9 @@ std::string sierpinski_triangle(int order){
     //this loop iterates throught the command string to look at each character to check whether there is an F or X in the current commands
     for(int i = 0; i < commands.size(); i++){
         if(commands[i] == 'F'){
-            newCommands += "FF"; //rule 1
+            newCommands += "FF";
         }else if(commands[i] == 'X'){
-            newCommands += "--FXF++FXF++FXF--"; //rule 2
+            newCommands += "--FXF++FXF++FXF--";
         }else{
             newCommands += commands[i];
             //if there is neither, you don't change the command, you keep it there
@@ -49,5 +50,3 @@ std::string sierpinski_triangle(int order){
 
     return newCommands;
 }
-
-
