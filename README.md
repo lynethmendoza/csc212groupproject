@@ -1,7 +1,7 @@
 # CSC 212 Term Project: Group 5 – Recursive Graphics
 Our project uses recursion to create different fractals: Sierpinski Triangle, Hilbert Curve, and Koch Snowflake.
 
-# Compiling and Running
+## Compiling and Running
 Since we are using L-Systems, it is important to use the L-System Plotter in this repo. 
 
 For Each Fractal C++ File:
