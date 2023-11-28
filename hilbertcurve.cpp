@@ -3,6 +3,10 @@
 #include <string>
 #include <sstream>
 
+// forward declarations
+void appendLeftCurve(std::stringstream& ss, int level);
+void appendRightCurve(std::stringstream& ss, int level);
+
 // function that starts generating the hilbert curve
 void drawHilbertCurve(int level) {
   std::stringstream ss;
