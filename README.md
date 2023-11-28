@@ -5,6 +5,7 @@ Our project uses recursion to create different fractals: Sierpinski Triangle, Hi
 Since we are using L-Systems, it is important to use the L-System Plotter in this repo. 
 
 
+# Specifics for Each Fractal
 Hilbert Curve Code:
 -Degrees: 90
 
