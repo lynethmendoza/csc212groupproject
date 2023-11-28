@@ -6,12 +6,22 @@
 // function that starts generating the hilbert curve
 void drawHilbertCurve(int level) {
   std::stringstream ss;
-  appendLeftCurve(ss, level);
-  return ss.str();
+  appendLeftCurve(ss, level); // starts with left curve
+  return ss.str(); // converts stringstream to string
 }
 
 // recursive function that appends the left part of the hilbert curve
 void appendLeftCurve(std::stringstream& ss, int level) {
+  if (level == 0) return; // base case, if level is zero it will return nothing
+
+  s << "-"; // turtle turns left
+  appendRightCurve(ss, level - 1); // appends the right curve of the previous level
+  ss << "F+"; // turtle moves forward and turns right
+  appendLeftCurve(ss, level - 1); // appends the left curve of the previous level
+  ss << "F"; // turtle moves forward
+  appendLeftCurve(ss, level - 1); // appends another left curve of the previous level
+  ss << "+F"; // turtle turns right and moves forward
+  appendRightCurve(ss, level - 1); // appends the right curve of the previous level
   
 }
 
