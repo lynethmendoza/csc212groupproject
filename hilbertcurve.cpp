@@ -8,7 +8,7 @@ void appendLeftCurve(std::stringstream& ss, int level);
 void appendRightCurve(std::stringstream& ss, int level);
 
 // function that starts generating the hilbert curve
-void drawHilbertCurve(int level) {
+std::string drawHilbertCurve(int level) {
   std::stringstream ss;
   appendLeftCurve(ss, level); // starts with left curve
   return ss.str(); // converts stringstream to string
