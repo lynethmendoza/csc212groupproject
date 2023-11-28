@@ -3,3 +3,8 @@ Our project consists of using recursion to create different fractals: Sierpinski
 
 How to run:
 
+Hilbert Curve Code:
+-Degrees: 90
+
+Sierpinski Snowkflake:
+-Degrees: 72?
