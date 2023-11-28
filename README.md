@@ -3,6 +3,7 @@ Our project uses recursion to create different fractals: Sierpinski Triangle, Hi
 
 ## Compiling and Running
 Since we are using L-Systems, it is important to use the L-System Plotter in this repo. 
+Make sure that all files are in the same directory in order for this to work.
 
 ### For Each Fractal C++ File:
 
