@@ -23,7 +23,11 @@ std::string sierpinski_triangle(int order){
     }
     
     std::string commands = sierpinski_triangle(order - 1);
-    // this is our recursive call, we reach it until we get to our degree one, and then we continually update it using the rules
+    // this is our recursive call, we reach it until we get to our degree one, and then we continually update it using the rules:
+    // when there is a F, change that to an "FF"
+    // when there is an X, change it to "--FXF++FXF++FXF--"
+
+
     
     std::string newCommands = "";
     for(int i = 0; i < commands.size(); i++){
