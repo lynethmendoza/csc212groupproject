@@ -8,9 +8,6 @@ void drawHilbertCurve(int level, std::string& commands) {
 
 }
 
-void outputCurve(int level, const std::string& filename) { 
-
-  // 
 
 
 int main(int argc, char* argv[]) {
