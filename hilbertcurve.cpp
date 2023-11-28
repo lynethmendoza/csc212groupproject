@@ -61,7 +61,7 @@ int main(int argc, char* argv[]) {
   std::string hilbertCurve = drawHilbertCurve(level); // generates the hilbert curve
   of << hilbertCurve; // writes curve to file
   of.close();
-  std::cout << "Hilbert curve commands written to '" << outputFilename << "'\n";
+  std::cout << "Hilbert curve commands written to 'l-system.txt'\n";
   
   return 0;
 }
