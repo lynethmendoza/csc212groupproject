@@ -7,26 +7,24 @@
 #include <fstream>
 #include <cmath>
 
-std::string triangle(int length) //helper function 
 std::string sierpinski_triangle(int order, int length); //recursive function
 
 int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
 
     int order = std::stoi(argc[1]);
-    int length = std::pow(2, degree - 1); //we need the lenght to be 2^n-1, n ebing the degrees 
-    of << sierpinski_triangle(order, length));
+    int length = std::pow(2, order - 1); //we need the lenght to be 2^n-1, n ebing the degrees 
+    of << sierpinski_triangle(order, length);
 }
 
 
 std::string sierpinski_triangle(int order, int length){
-    std::string commands = "";
-    if(order == 0){
-        return = "F+F+F+";
+    if(order == 1){
+        return "F+F+F+";
         //our base case is if we reach our order 0, that means that all we have to draw is one triangle
     }
-
-    std::string commands = sierpinski_triangle(order -1, length/2)+ "- " + sierpinski_triangle(order - 1, length/2) + "- " + sierpinski_triangle(order -1, length/2) + "+ + " + sierpinski_triangle(order - 1, length/2);
+    
+    std::string commands = sierpinski_triangle(order - 1, length/2)+ "- " + sierpinski_triangle(order - 1, length/2) + "- " + sierpinski_triangle(order -1, length/2) + "+ + " + sierpinski_triangle(order - 1, length/2);
     // this is our recursive call, it calls the function 4 times, because you are trying to make 4 smaller equal triangles in one triangle
     
     return commands;
