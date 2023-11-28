@@ -23,8 +23,8 @@ std::string sierpinski_triangle(int order){
     }
     
     std::string commands = sierpinski_triangle(order - 1);
-    // this is our recursive call, it calls the function 4 times, because you are trying to make 4 smaller equal triangles in one triangle
-
+    // this is our recursive call, we reach it until we get to our degree one, and then we continually update it using the rules
+    
     std::string newCommands = "";
     for(int i = 0; i < commands.size(); i++){
         if(commands[i] == 'F'){
