@@ -1,20 +1,22 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 
-void drawHilbertCurve(int level, std::string& commands) {
-
-  // implement recursive function
-
+// function that starts generating the hilbert curve
+void drawHilbertCurve(int level) {
+  std::stringstream ss;
+  appendLeftCurve(ss, level);
+  return ss.str();
 }
 
 // recursive function that appends the left part of the hilbert curve
-void appendLeftCurve(std::stringstream& ss, int n) {
+void appendLeftCurve(std::stringstream& ss, int level) {
   
 }
 
 // recursive function that appends the right part of the hilbert curve
-void appendRightCurve(std::stringstream& ss, int n) {
+void appendRightCurve(std::stringstream& ss, int level) {
   
 }
 
