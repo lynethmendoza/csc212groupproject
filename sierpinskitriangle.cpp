@@ -1,11 +1,11 @@
 //Start code used from Lab 6
 //Sierpinski triangle is the idea of drawing smaller, equilateral triangles into one big equilateral triangle, depending on the degree given
-//In this case, degree/order 0 == one triangle
+//In this case, degree/order 0 == no triangle
+//This code uses L System commands in order to visually represent the output
 
 #include <string>
 #include <iostream>
 #include <fstream>
-#include <cmath>
 
 std::string sierpinski_triangle(int order); //recursive function
 
@@ -13,23 +13,29 @@ int main(int argv, char* argc[]){
     std::ofstream of("l-system.txt");
     int order = std::stoi(argc[1]);
     of << sierpinski_triangle(order);
+    of.close();
+    std::cout << "Sierpinski Triangle commands written to 'l-system.txt'\n";
 }
 
 
 std::string sierpinski_triangle(int order){
     if(order == 0){
+        return "";
+        //our base case is if we reach our order 0, that means that we don't draw anything
+    }
+
+    if(order == 1){
         return "FXF--FF--FF";
-        //our base case is if we reach our order 0, that means that all we have to draw is one triangle, these commands will make one triangel
+        //our second base case is that when we reach order 1, we just draw 1 triangle
     }
     
-    std::string commands = sierpinski_triangle(order - 1);
-    // this is our recursive call, we reach it until we get to our degree one, and then we continually update it using the rules:
-    // when there is a F, change that to an "FF"
-    // when there is an X, change it to "--FXF++FXF++FXF--"
+    std::string commands = sierpinski_triangle(order - 1); //recursive call, this reaches all the way to the base case, then we edit until we reach the order we need
 
+    std::string newCommands = ""; //we use this to use the rules in order to create the fractal
+    //rule 1: whenever there is an F, make it an FF
+    //rule 2: whenever there is an X, make it a --FXF++FXF++FXF--, which makes an upside triangle
 
-    
-    std::string newCommands = "";
+    //this loop iterates throught the command string to look at each character to check whether there is an F or X in the current commands
     for(int i = 0; i < commands.size(); i++){
         if(commands[i] == 'F'){
             newCommands += "FF";
@@ -37,9 +43,11 @@ std::string sierpinski_triangle(int order){
             newCommands += "--FXF++FXF++FXF--";
         }else{
             newCommands += commands[i];
+            //if there is neither, you don't change the command, you keep it there
         }
     }
 
     return newCommands;
 }
+
 
