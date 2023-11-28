@@ -14,7 +14,6 @@ int main(){
     int degree = 3;
 
     of << koch_snowflake(degree);
-    //of << sierpinski_triangle(degree, std::pow(2, degree - 1));
 }
 
 // *** DO NOT TOUCH! ***
