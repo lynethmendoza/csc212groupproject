@@ -8,10 +8,10 @@ For each fractal cpp file:
 -
 You need to run and compile this first before plotting. 
 To do this, you should run the following cpp files with this:
-g++ [chosenfractal].cpp  && ./a.out [filename].txt [degree/order of fractal]  
+g++ [chosenfractal].cpp  && ./a.out [filename].txt [degree/order of fractal]
 
-
-
+For the L-System Plotter Python File:
+=
 
 # Specifics for Each Fractal
 Hilbert Curve Code:
