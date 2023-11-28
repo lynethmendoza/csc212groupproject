@@ -6,6 +6,10 @@ Since we are using L-Systems, it is important to use the L-System Plotter in thi
 
 For each fractal cpp file:
 -
+You need to run and compile this first before plotting. 
+To do this, you should run the following cpp files with this:
+g++ [chosenfractal].cpp  && ./a.out [filename].txt [degree/order of fractal]  
+
 
 
 
