@@ -12,6 +12,8 @@ g++ [chosenfractal].cpp  && ./a.out [filename].txt [degree/order of fractal]
 
 For the L-System Plotter Python File:
 --
+The python file should take in your command file name (that was edited in the cpp file), the name for your png file, and the degree for turns
+python3 "l-system-plotter.py" "filename.txt" "outputname.png" [degree]
 
 # Specifics for Each Fractal
 Hilbert Curve Code:
