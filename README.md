@@ -8,3 +8,6 @@ Hilbert Curve Code:
 
 Sierpinski Snowkflake:
 -Degrees: 72?
+
+Sierpinski Triangle:
+-Degrees: 120
