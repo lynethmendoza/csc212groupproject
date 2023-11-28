@@ -14,7 +14,7 @@ void drawHilbertCurve(int level) {
 void appendLeftCurve(std::stringstream& ss, int level) {
   if (level == 0) return; // base case, if level is zero it will return nothing
 
-  s << "-"; // turtle turns left
+  ss << "-"; // turtle turns left
   appendRightCurve(ss, level - 1); // appends the right curve of the previous level
   ss << "F+"; // turtle moves forward and turns right
   appendLeftCurve(ss, level - 1); // appends the left curve of the previous level
@@ -22,7 +22,7 @@ void appendLeftCurve(std::stringstream& ss, int level) {
   appendLeftCurve(ss, level - 1); // appends another left curve of the previous level
   ss << "+F"; // turtle turns right and moves forward
   appendRightCurve(ss, level - 1); // appends the right curve of the previous level
-  
+  ss << "-"; // turtle turns left
 }
 
 // recursive function that appends the right part of the hilbert curve
@@ -37,7 +37,7 @@ void appendRightCurve(std::stringstream& ss, int level) {
   appendRightCurve(ss, level - 1);
   ss << "-F"; // turtle turns left and moves forward
   appendLeftCurve(ss, level - 1);
-  
+  ss << "+"; // turtle turns right
 }
 
 // handles cla and writes the curve data to a file
