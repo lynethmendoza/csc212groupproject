@@ -1,4 +1,4 @@
-//Start code used from Lab 6
+//Starter code used from Lab 6
 //Sierpinski triangle is the idea of drawing smaller, equilateral triangles into one big equilateral triangle, depending on the degree given
 //In this case, degree/order 0 == no triangle
 //This code uses L System commands in order to visually represent the output
