@@ -1,7 +1,6 @@
 //Starter code used from Lab 6
-
-#include <string>
 #include <iostream>
+#include <string>
 #include <fstream>
 #include <cmath>
 
@@ -35,7 +34,18 @@ std::string snowflake(int degree){
     }
     std::string commands = "";
 
-	// Logic for generating the snowflake goes here.
+	 // Logic for generating the snowflake goes here.
+
+    // Pattern F-F++F-F
+    commands += snowflake(degree - 1);
+    commands += "-"; // F-
+    commands += snowflake(degree - 1); 
+    commands += "+ + "; // F++
+    commands += snowflake(degree - 1); 
+    commands += "-"; // F-
+    commands += snowflake(degree - 1); 
+    commands += "-"; // F -
+    commands += snowflake(degree - 1);
 
     return commands;
 }
