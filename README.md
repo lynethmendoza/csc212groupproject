@@ -19,12 +19,9 @@ The Python file should take in your command file name (that was edited in the C+
 
 ``python3 "l-system-plotter.py" "[filename].txt" "[outputname].png" [degree]``
 
-## Specifics for Each Fractal
-Hilbert Curve Code:
--Degrees: 90
+## Degrees for Each Fractal
+Hilbert Curve Code: 90
 
-Sierpinski Snowkflake:
--Degrees: 60
+Sierpinski Snowkflake: 60
 
-Sierpinski Triangle:
--Degrees: 120
+Sierpinski Triangle: 120
