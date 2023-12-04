@@ -20,6 +20,8 @@ int main(int argc, char *argv[]){
 
     // Call recursive function
     of << Koch_snowflake(degree);
+    of.close();
+    std::cout << "Snowflake commands written to 'l-system.txt'\n";
 
     return 0;
 }
