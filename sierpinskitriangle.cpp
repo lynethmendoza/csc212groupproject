@@ -14,14 +14,14 @@ int main(int argc, char* argv[]){
         std::cerr <<"Usage: " << argv[0] << " <filename> <order>\n";
         return 1;
     }
-    std::string filename = argv[1]; //input file that will put the commands
+    std::string filename = argv[1]; //input file that will be used to put the commands
     std::ofstream of(filename);
 
     if(!of.is_open()){
         std::cerr << "Error: Unable to open file '" << filename << "' for writing.\n";
         return 1;
     }
-    int order = std::stoi(argv[2]);
+    int order = std::stoi(argv[2]); //order of fractal that we want
     of << sierpinski_triangle(order);
     of.close();
     std::cout << "Sierpinski Triangle commands written to '" << filename << "' \n";
@@ -47,7 +47,7 @@ std::string sierpinski_triangle(int order){
     //rule 1: whenever there is an F, make it an FF
     //rule 2: whenever there is an X, make it a --FXF++FXF++FXF--, which makes an upside-down triangle
 
-    //this loop iterates through the command string to look at each character to check whether there is an F or X in the current commands
+    //this loop iterates through the current command string to look at each character to check whether there is an F or X in the current commands
     for(int i = 0; i < commands.size(); i++){
         if(commands[i] == 'F'){
             newCommands += "FF";
