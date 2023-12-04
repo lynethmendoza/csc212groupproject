@@ -9,19 +9,19 @@ std::string Koch_snowflake(int degree);
 
 int main(int argc, char *argv[]){
 
-    if(argc != 2){
-        std::cerr << "Usage: ./prog <degree>\n";
+    if(argc != 3){
+        std::cerr << "Usage: " << argv[0] << " <filename> <degree>\n";
         return 1;
     }
-    int degree = std::atoi(argv[1]);
-    
-    // Ofstream to output the restlt of the koch function
-    std::ofstream of("l-system.txt");
+
+    std::string filename = argv[1];
+    std::ofstream of(filename); // Ofstream to output the restlt of the koch function
+    int degree = std::atoi(argv[2]);
 
     // Call recursive function
     of << Koch_snowflake(degree);
     of.close();
-    std::cout << "Snowflake commands written to 'l-system.txt'\n";
+    std::cout << "Snowflake commands written to '" << filename << "'\n";
 
     return 0;
 }
