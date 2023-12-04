@@ -15,7 +15,7 @@ To do this, you should run the following cpp files with this:
 
 ### For the L-System Plotter Python File:
 
-The Python file should take in your command file name (that was edited in the C++ file), the name for your PNG file, and the degree for turns:
+The Python file should take in your command file name (that was edited in the C++ file), the name for your output PNG file, and the degree for turns:
 
 ``python3 "l-system-plotter.py" "[filename].txt" "[outputname].png" [degree]``
 
