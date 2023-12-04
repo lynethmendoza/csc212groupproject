@@ -1,5 +1,5 @@
 # CSC 212 Term Project: Group 5 – Recursive Graphics
-Our project uses recursion to create three different fractals: Hilbert Curve, Koch Snowflake, and Sierpinski Triangle. We also use L-System to make the commands to draw the fractals that we are given.
+Our project uses recursion to create three different fractals: Hilbert Curve, Koch Snowflake, and Sierpinski Triangle. We also use L-System to make the commands, and we use Python Turtle to draw the fractals that we are given.
 
 ## Compiling and Running
 Since we are using L-Systems, it is important to use the L-System Plotter Python code in this repo. 
