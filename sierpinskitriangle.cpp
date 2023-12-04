@@ -9,13 +9,24 @@
 
 std::string sierpinski_triangle(int order); //recursive function
 
-int main(int argv, char* argc[]){
-    std::string filename = argc[1]; //input file that will put the commands
+int main(int argc, char* argv[]){
+    if(argc != 3) {
+        std::cerr <<"Usage: " << argv[0] << " <filename> <order>\n";
+        return 1;
+    }
+    std::string filename = argv[1]; //input file that will put the commands
     std::ofstream of(filename);
-    int order = std::stoi(argc[2]);
+
+    if(!of.is_open()){
+        std::cerr << "Error: Unable to open file '" << filename << "' for writing.\n";
+        return 1;
+    }
+    int order = std::stoi(argv[2]);
     of << sierpinski_triangle(order);
     of.close();
     std::cout << "Sierpinski Triangle commands written to '" << filename << "' \n";
+
+    return 0;
 }
 
 
