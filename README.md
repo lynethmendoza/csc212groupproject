@@ -1,14 +1,14 @@
 # CSC 212 Term Project: Group 5 – Recursive Graphics
-Our project uses recursion to create different fractals: Hilbert Curve, Koch Snowflake, and Sierpinski Triangle. We also use L-System to make the commands to draw the fractals that we are given.
+Our project uses recursion to create three different fractals: Hilbert Curve, Koch Snowflake, and Sierpinski Triangle. We also use L-System to make the commands to draw the fractals that we are given.
 
 ## Compiling and Running
 Since we are using L-Systems, it is important to use the L-System Plotter Python code in this repo. 
-Make sure that all files are in the same directory for this to work.
-You have to download matplotlib onto your computer since the L-System code uses that library.
+Ensure all files are in the same directory for this to work.
+You have to download the matplotlib library onto your computer since the L-System code uses it.
 
 ### For Each Fractal C++ File:
 
-You'll need to run and compile the C++ first before you plot whichever fractal you may like. 
+You'll need to run and compile the C++ before plotting whichever fractal you like. 
 To do this, you should run the following cpp files with this:
 
 ``g++ [chosenfractal].cpp  && ./a.out [filename].txt [degree/order of fractal]``
@@ -22,6 +22,6 @@ The Python file should take in your command file name (that was edited in the C+
 ## Degrees for Each Fractal
 Hilbert Curve: 90
 
-Koch Snowkflake: 60
+Koch Snowflake: 60
 
 Sierpinski Triangle: 120
