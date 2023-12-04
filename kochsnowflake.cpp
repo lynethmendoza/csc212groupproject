@@ -2,19 +2,26 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cstdlib>
 
 // Function declarations
 std::string Koch_snowflake(int degree);
 
-int main(){
+int main(int argc, char *argv[]){
 
+    if(argc != 2){
+        std::cerr << "Usage: ./prog <degree>\n";
+        return 1;
+    }
+    int degree = std::atoi(argv[1]);
+    
     // Ofstream to output the restlt of the koch function
     std::ofstream of("l-system.txt");
 
-    int degree = 6;
-
     // Call recursive function
     of << Koch_snowflake(degree);
+
+    return 0;
 }
 // Recursive function for generating the snowflake
 std::string Koch_snowflake(int degree){
