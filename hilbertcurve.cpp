@@ -46,22 +46,25 @@ void appendRightCurve(std::stringstream& ss, int level) {
 
 // handles cla and writes the curve data to a file
 int main(int argc, char* argv[]) {
-  if (argc != 2) {
-    std::cerr << "Usage: " << argv[0] << " <level>\n";
+  if (argc != 3) {
+    std::cerr << "Usage: " << argv[0] << " <filename> <level>\n";
     return 1;
   }
 
-  int level = std::stoi(argv[1]); // first argument is level of curve
-  std::ofstream of("l-system.txt"); // opens file stream
+  std::string filename = argv[1]; // first argument that will put the commands on the input file
+  std::ofstream of(filename); // opens file stream
+  
+  int level = std::stoi(argv[1]); // second argument is level of curve
 
   if(!of.is_open()) { 
-    std::cerr << "Error: Unable to open file 'l-system.txt' for writing.\n";
+    std::cerr << "Error: Unable to open file '" << filename << "' for writing.\n";
+    return 1;
   }
 
   std::string hilbertCurve = drawHilbertCurve(level); // generates the hilbert curve
   of << hilbertCurve; // writes curve to file
   of.close();
-  std::cout << "Hilbert curve commands written to 'l-system.txt'\n";
+  std::cout << "Hilbert curve commands written to '" << filename << "'\n";
   
   return 0;
 }
