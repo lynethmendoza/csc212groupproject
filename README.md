@@ -11,7 +11,7 @@ You have to download the matplotlib library onto your computer since the L-Syste
 You'll need to run and compile the C++ fractal files before plotting whichever fractal you like with the L-System Plotter code. 
 To do this, you should run the following cpp files with this:
 
-``g++ [chosenfractal].cpp  && ./a.out [filename].txt [degree/order of fractal]``
+``g++ [chosenfractal].cpp  && ./a.out [filename].txt [order of fractal]``
 
 ### For the L-System Plotter Python File:
 
